@@ -18,7 +18,8 @@ void argc_check(int argc)
 
 /** 
  * file_check - check the file stream
- * @fp: pointer to file
+ * @fd: pointer to file
+ * Return: void
  */
 
 void file_check(FILE *fd, char *infile)
