@@ -39,7 +39,7 @@ int main(int argc, char **argv)
 		j = 0;
 		while (j < 8)
 		{
-			if (strcmp(instruct[j].opcode, cmd_str) == 0)
+			if (cmd_str[0] != '#' && strcmp(instruct[j].opcode, cmd_str) == 0)
 			{
 				instruct[j].f(&head, line_num);
 				break;
