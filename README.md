@@ -14,4 +14,4 @@ monty is the interpreter that can read the input file, and  execute the bytecode
 
 compiling instruction, example:
 
-gcc -Wall -Werror -Wextra -pedantic -std=c90 *.c -o hsh
+gcc -Wall -Werror -Wextra -pedantic -std=c90 *.c -o monty

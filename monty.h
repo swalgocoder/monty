@@ -5,8 +5,12 @@
 #include <unistd.h>
 #include <string.h>
 #include <ctype.h>
-
-
+#include <fcntl.h>
+#include <errno.h>
+#include <limits.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <stdbool.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
