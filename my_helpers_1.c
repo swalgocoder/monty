@@ -1,8 +1,8 @@
 #include "monty.h"
 
 /**
- * my_add - add the top two number of the stack in a batch
- * @head: beginning of the stack
+ * my_add - add the top two n(values) of the stack in a batch
+ * @head: start of the stack
  * @line_number: line number of command in text
  * Return: void
  */
@@ -30,8 +30,8 @@ void my_add(stack_t **head, unsigned int line_number)
 
 /**
  * my_nop - does nothing
- * @head: null input
- * @line_number: null input
+ * @head: input
+ * @line_number: input
  * Return: void
  */
 void my_nop(stack_t **head, unsigned int line_number)
@@ -43,7 +43,7 @@ void my_nop(stack_t **head, unsigned int line_number)
 
 /**
  * my_sub - subtract the top n(value) from the second(vs.top)
- * @head: beginning of the stack
+ * @head: start of the stack
  * @line_number: line number of command in stack
  * Return: void
  */
@@ -71,9 +71,9 @@ void my_sub(stack_t **head, unsigned int line_number)
 
 /**
  * my_div - divide the second n by the top n
- * @head: beginning of the stack
+ * @head: start of the stack
  * @line_number: line number of command in stack
- * Return: nothing
+ * Return: void
  */
 void my_div(stack_t **head, unsigned int line_number)
 {
@@ -99,7 +99,7 @@ void my_div(stack_t **head, unsigned int line_number)
 
 /**
  * my_mul - multiplication of the top two values
- * @head: beginning of the satck
+ * @head: start of the satck
  * @line_number: line number of command in stack
  * Return: void
  */
