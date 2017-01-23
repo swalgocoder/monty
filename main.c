@@ -35,7 +35,7 @@ int main(int argc, char **argv)
 	while ((readfile = getline(&line, &length, fd)) != -1)
 	{
 
-		cmd_str = get_cmd(line, line_num);
+		cmd_str = read_cmd(line, line_num);
 		j = 0;
 		while (j < 8)
 		{
