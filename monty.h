@@ -1,9 +1,12 @@
-#ifndef H_98_H
-#define H_98_H
+#ifndef MONTY_H
+#define MONTY_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <stdarg.h>
+#include <string.h>
+#include <ctype.h>
+
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -19,6 +22,7 @@ typedef struct stack_s
         struct stack_s *prev;
         struct stack_s *next;
 } stack_t;
+
 /**
  * struct instruction_s - opcoode and its function
  * @opcode: the opcode
@@ -32,4 +36,40 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+
+extern int my_array[];
+
+void argc_check(int argc);
+void file_check(FILE *fd, char *infile);
+
+void my_push(stack_t **head, unsigned int line_number);
+void my_pall(stack_t **head, unsigned int line_number);
+
+void my_pint(stack_t **head, unsigned int line_number);
+void my_pop(stack_t **head, unsigned int line_number);
+
+void my_swap(stack_t **head, unsigned int line_number);
+void my_add(stack_t **head, unsigned int line_number);
+
+void my_nop(stack_t **head, unsigned int line_number);
+void my_sub(stack_t **head, unsigned int line_number);
+
+void my_div(stack_t **head, unsigned int line_number);
+void my_mul(stack_t **head, unsigned int line_number);
+
+void my_mod(stack_t **head, unsigned int line_number);
+void my_pchar(stack_t **head, unsigned int line_number);
+
+void my_pstr(stack_t **head, unsigned int line_number);
+void my_rotl(stack_t **head, unsigned int line_number);
+
+void my_rotr(stack_t **head, unsigned int line_number);
+void my_queue(stack_t **head, unsigned int line_number);
+void my_stack(stack_t **head, unsigned int line_number);
+
+stack_t *add_node_end(stack_t **head, const int n);
+stack_t *add_node(stack_t **head, const int n);
+stack_t *find_end(stack_t **head);
+char *get_cmd(char *line, unsigned int line_num);
 #endif
