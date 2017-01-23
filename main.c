@@ -3,11 +3,11 @@
 int my_array[] = {0, 0};
 int main(int argc, char **argv)
 {
-	FILE *fd;
-	char *filepath, *line, *cmd_str;
-	size_t length;
+	FILE *fd = fopen(argv[1], "r");
+	char *filepath, *line = NULL, *cmd_str;
+	size_t length = 0;
 	ssize_t readfile;
-	stack_t *head;
+	stack_t *head = NULL;
 	unsigned int line_num;
 	int j;
 	instruction_t instruct[] = {
@@ -21,9 +21,6 @@ int main(int argc, char **argv)
 		{NULL, NULL}
 	};
 
-	length = 0;
-	line = NULL;
-	head = NULL;
 	argc_check(argc);
 	filepath = argv[1];
 
