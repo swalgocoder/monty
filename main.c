@@ -1,5 +1,4 @@
 #include "monty.h"
-#include "getline.h"
 
 int my_array[] = {0, 0};
 int main(int argc, char **argv)
