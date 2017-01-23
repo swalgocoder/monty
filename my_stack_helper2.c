@@ -2,9 +2,9 @@
 
 /**
  * my_queue - set status to be queue
- * @head: unneeded value
- * @line_number: unneeded value
- * Return: nothing
+ * @head: head
+ * @line_number: line number
+ * Return: void
  */
 void my_queue(stack_t **head, unsigned int line_number)
 {
@@ -16,9 +16,9 @@ void my_queue(stack_t **head, unsigned int line_number)
 
 /**
  * my_stack - set status to be stack
- * @head: unneeded value
- * @line_number: unneeded value
- * Return: nothing
+ * @head: head
+ * @line_number: line number
+ * Return: void
  */
 void my_stack(stack_t **head, unsigned int line_number)
 {
