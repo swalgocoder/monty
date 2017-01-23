@@ -4,7 +4,7 @@ int my_array[] = {0, 0};
 int main(int argc, char **argv)
 {
 	FILE *fd;
-	char *filepath, *line, *cmd;
+	char *filepath, *line, *cmd_str;
 	size_t length;
 	ssize_t readfile;
 	stack_t *head;
@@ -35,13 +35,11 @@ int main(int argc, char **argv)
 	while ((readfile = getline(&line, &length, fd)) != -1)
 	{
 
-		cmd = get_cmd(line, line_num);
+		cmd_str = get_cmd(line, line_num);
 		j = 0;
 		while (j < 8)
 		{
-			if (cmd[0] == '#')
-				break;
-			if (strcmp(instruct[j].opcode, cmd) == 0)
+			if (strcmp(instruct[j].opcode, cmd_str) == 0)
 			{
 				instruct[j].f(&head, line_num);
 				break;
