@@ -46,6 +46,8 @@ typedef struct instruction_s
 extern int my_array[];
 ssize_t getline (char **_lineptr, size_t *_linesize, FILE *_stream);
 
+void cmd_str(char *line, size_t length, FILE *fd);
+
 void argc_check(int argc);
 void file_check(FILE *fd, char *infile);
 
