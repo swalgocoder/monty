@@ -1,10 +1,10 @@
 #include "monty.h"
 
 /**
- * my_push - function that will push integer n onto stack
+ * my_push - push integer n onto stack
  * @head: start of stack
  * @line_number: line number in file
- * Return: nothing
+ * Return: void
  */
 void my_push(stack_t **head, unsigned int line_number)
 {
@@ -18,10 +18,10 @@ void my_push(stack_t **head, unsigned int line_number)
 }
 
 /**
- * my_pall - function that wil print everything out on stack
- * @head: beginning of stack
+ * my_pall - print everything in  stack
+ * @head: start of stack
  * @line_number: line_number in file
- * Return: nothing
+ * Return: void
  */
 void my_pall(stack_t **head, unsigned int line_number)
 {
@@ -42,10 +42,10 @@ void my_pall(stack_t **head, unsigned int line_number)
 }
 
 /**
- * my_pint - function that will print first int in stack
- * @head: beginning of stack
+ * my_pint - print first int in stack
+ * @head: start of stack
  * @line_number: line number of line in file
- * Return: nothing
+ * Return: void
  */
 void my_pint(stack_t **head, unsigned int line_number)
 {
@@ -55,7 +55,7 @@ void my_pint(stack_t **head, unsigned int line_number)
 	temp = find_end(head);
 	if (temp == NULL)
 	{
-		printf("L%u: can't pint, stack empty\n", line_number);
+		printf("L%u: can't print, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	else
@@ -63,25 +63,25 @@ void my_pint(stack_t **head, unsigned int line_number)
 }
 
 /**
- * my_pop - function that will "pop" the most recent item off stack
- * @head: beginning of stack
+ * my_pop - "pop" the most recent item off stack
+ * @head: start of stack
 `* @line_number: line number in file
- * Return: nothing
+ * Return: void
  */
 void my_pop(stack_t **head, unsigned int line_number)
 {
-	stack_t *temp, *helper;
+	stack_t *temp, *helptmp;
 
 	printf("enter pop\n");
 	if (*head == NULL)
 	{
-		printf("L%u: can't pop an empty stack\n", line_number);
+		printf("L%u: can't pop, empty stack\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	temp = find_end(head);
-	helper = temp->prev;
-	if (helper != NULL)
-		helper->next = NULL;
+	helptmp = temp->prev;
+	if (helptmp != NULL)
+		helptmp->next = NULL;
 	else
 		*head = NULL;
 	free(temp);
@@ -89,25 +89,25 @@ void my_pop(stack_t **head, unsigned int line_number)
 
 /**
  * my_swap - swap the location of the top two values in the stack
- * @head: beginning of the stack
+ * @head: start of the stack
  * @line_number: the line number of command in the file
- * Return: nothing
+ * Return: void
  */
 void my_swap(stack_t **head, unsigned int line_number)
 {
-	stack_t *temp, *helper;
+	stack_t *temp, *helptmp;
 	int help;
 
 	temp = find_end(head);
 	printf("enter swap\n");
 	if (temp == NULL || temp->prev == NULL )
 	{
-		printf("L%u: can't swap, stack too short\n", line_number);
+		printf("L%u: can't swap, no space stack\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	helper = temp->prev;
-	printf("%d, %d\n", temp->n, helper->n);
+	helptmp = temp->prev;
+	printf("%d, %d\n", temp->n, helptmp->n);
 	help = temp->n;
-	temp->n = helper->n;
-	helper->n = help;
+	temp->n = helptmp->n;
+	helptmp->n = help;
 }
