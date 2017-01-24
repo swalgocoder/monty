@@ -3,24 +3,24 @@
 char *read_cmd(char *line, unsigned int line_num)
 {
 	int i;
-	char *t, *temp_num;
+	char *tok, *tmp_tok;
 
-	t = strtok(line, " \n\t");
+	tok = strtok(line, " \n\t");
 
-	if (strcmp(t, "push") == 0)
+	if (strcmp(tok, "push") == 0)
 	{
 		printf("enter\n");
-		temp_num = strtok(NULL, " ");
+		tmp_tok = strtok(NULL, " ");
 
-		if (temp_num == NULL)
+		if (tmp_tok == NULL)
 		{
 			printf("L%u: usage: push integer\n", line_num);
 			exit(EXIT_FAILURE);
 		}
-		for (i = 0; temp_num[i] >= ' ' && temp_num[i] <= '~'; i++)
+		for (i = 0; tmp_tok[i] >= ' ' && tmp_tok[i] <= '~'; i++)
 		{
 
-			if (temp_num[i] > '9' || temp_num[i] < '0')
+			if (tmp_tok[i] > '9' || tmp_tok[i] < '0')
 			{
 
 				printf("L%u: usage: push integer\n", line_num);
@@ -28,11 +28,11 @@ char *read_cmd(char *line, unsigned int line_num)
 			}
 		}
 
-		i = atoi(temp_num);
+		i = atoi(tmp_tok);
 
 		my_array[0] = i;
 
 	}
 
-	return t;
+	return tok;
 }
