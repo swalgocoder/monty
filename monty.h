@@ -61,20 +61,7 @@ void my_swap(stack_t **head, unsigned int line_number);
 void my_add(stack_t **head, unsigned int line_number);
 
 void my_nop(stack_t **head, unsigned int line_number);
-void my_sub(stack_t **head, unsigned int line_number);
 
-void my_div(stack_t **head, unsigned int line_number);
-void my_mul(stack_t **head, unsigned int line_number);
-
-void my_mod(stack_t **head, unsigned int line_number);
-void my_pchar(stack_t **head, unsigned int line_number);
-
-void my_pstr(stack_t **head, unsigned int line_number);
-void my_rotl(stack_t **head, unsigned int line_number);
-
-void my_rotr(stack_t **head, unsigned int line_number);
-/*void my_queue(stack_t **head, unsigned int line_number);*/
-  /*void my_stack(stack_t **head, unsigned int line_number);*/
 
 stack_t *add_node_end(stack_t **head, const int n);
 stack_t *add_node(stack_t **head, const int n);
