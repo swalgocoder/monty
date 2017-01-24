@@ -10,7 +10,7 @@ stack_t *addnode_2_end(stack_t **head, const int n)
 {
 	stack_t *new_node, *temp;
 
-	printf("enter add_node_end\n");
+
 	temp = *head;
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
