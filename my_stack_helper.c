@@ -57,19 +57,19 @@ stack_t *add_mynode(stack_t **head, const int n)
 {
 	stack_t *new_node, *temp;
 
-	printf("enter add_node\n");
+
 	temp = *head;
-	printf("get it\n");
+
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 		return (NULL);
 	new_node->prev = NULL;
-	printf("working\n");
+
 	new_node->next = *head;
 	new_node->n = n;
 	if (temp != NULL)
 		temp->prev = new_node;
-	printf("head reset\n");
+
 	*head = new_node;
 	return (new_node);
 }
