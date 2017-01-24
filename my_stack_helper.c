@@ -8,16 +8,15 @@
  */
 stack_t *addnode_2_end(stack_t **head, const int n)
 {
-	stack_t *new_node, *tmp_node;
+	stack_t *new_node = new_node = malloc(sizeof(stack_t)) , *tmp_node;
 
 
-	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 		return (NULL);
 	new_node->n = n;
 	new_node->prev = NULL;
-	new_node->next = NULL;
-	if (*head == NULL)
+	new_node->next = NULL; /*avoid inserting invalid ptr to end of list*/
+	if (*head == NULL) /*if head empty, new node is the head*/
 		*head = new_node;
 	else
 	{
