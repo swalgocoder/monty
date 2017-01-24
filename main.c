@@ -1,6 +1,6 @@
 #include "monty.h"
 
-int my_array[] = {0, 0};
+int my_array[2];
 int main(int argc, char **argv)
 {
 	FILE *fd = fopen(argv[1], "r");
