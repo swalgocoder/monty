@@ -63,8 +63,8 @@ void my_add(stack_t **head, unsigned int line_number);
 void my_nop(stack_t **head, unsigned int line_number);
 
 
-stack_t *add_node_end(stack_t **head, const int n);
-stack_t *add_node(stack_t **head, const int n);
-stack_t *find_end(stack_t **head);
+stack_t *addnode_2_end(stack_t **head, const int n);
+stack_t *add_mynode(stack_t **head, const int n);
+stack_t *find_stk_end(stack_t **head);
 char *read_cmd(char *line, unsigned int line_num);
 #endif

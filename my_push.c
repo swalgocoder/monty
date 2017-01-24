@@ -12,9 +12,9 @@ void my_push(stack_t **head, unsigned int line_number)
 
 
 	if (my_array[1] == 0)
-		add_node_end(head, my_array[0]);
+		addnode_2_end(head, my_array[0]);
 	else
-		add_node(head, my_array[0]);
+		add_mynode(head, my_array[0]);
 }
 
 /**
@@ -31,7 +31,7 @@ void my_pall(stack_t **head, unsigned int line_number)
 
 	if (*head != NULL)
 	{
-		temp = find_end(head);
+		temp = find_stk_end(head);
 		while (temp != NULL)
 		{
 			printf("%d\n", temp->n);
@@ -52,7 +52,7 @@ void my_pint(stack_t **head, unsigned int line_number)
 	stack_t *temp;
 
 	printf("-------------------------------------------\n");
-	temp = find_end(head);
+	temp = find_stk_end(head);
 	if (temp == NULL)
 	{
 		printf("L%u: can't print, stack empty\n", line_number);
@@ -78,7 +78,7 @@ void my_pop(stack_t **head, unsigned int line_number)
 		printf("L%u: can't pop, empty stack\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	temp = find_end(head);
+	temp = find_stk_end(head);
 	helptmp = temp->prev;
 	if (helptmp != NULL)
 		helptmp->next = NULL;
@@ -98,7 +98,7 @@ void my_swap(stack_t **head, unsigned int line_number)
 	stack_t *temp, *helptmp;
 	int swap_n;
 
-	temp = find_end(head);
+	temp = find_stk_end(head);
 
 	if (temp == NULL || temp->prev == NULL )
 	{

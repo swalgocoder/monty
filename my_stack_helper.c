@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * add_node_end - add node to the end of stack
+ * add_node_end - add node("n" to "push") to the end of stack
  * @head: start of the stack
  * @n: value to add to the linked list
  * Return: pointer to new_node
  */
-stack_t *add_node_end(stack_t **head, const int n)
+stack_t *addnode_2_end(stack_t **head, const int n)
 {
 	stack_t *new_node, *temp;
 
@@ -35,7 +35,7 @@ stack_t *add_node_end(stack_t **head, const int n)
  * @head: start of stack
  * Return: last item in the stack
  */
-stack_t *find_end(stack_t **head)
+stack_t *find_stk_end(stack_t **head)
 {
 	stack_t *temp;
 
@@ -53,7 +53,7 @@ stack_t *find_end(stack_t **head)
  * @n: value to add
  * Return: start of the stack
  */
-stack_t *add_node(stack_t **head, const int n)
+stack_t *add_mynode(stack_t **head, const int n)
 {
 	stack_t *new_node, *temp;
 

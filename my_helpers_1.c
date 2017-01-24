@@ -11,7 +11,7 @@ void my_add(stack_t **head, unsigned int line_number)
 	stack_t *temp, *helptmp;
 	int i, j;
 
-	temp = find_end(head);
+	temp = find_stk_end(head);
 	if (temp == NULL || temp->prev == NULL)
 	{
 		printf("L%u: can't add, no space in stack\n", line_number);
