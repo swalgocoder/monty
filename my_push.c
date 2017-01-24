@@ -51,7 +51,7 @@ void my_pint(stack_t **head, unsigned int line_number)
 {
 	stack_t *temp;
 
-	printf("-------------------------------------------\n");
+
 	temp = find_stk_end(head);
 	if (temp == NULL)
 	{
