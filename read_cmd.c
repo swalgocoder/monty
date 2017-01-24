@@ -9,7 +9,7 @@ char *read_cmd(char *line, unsigned int line_num)
 
 	if (strcmp(tok, "push") == 0)
 	{
-		printf("enter\n");
+
 		tmp_tok = strtok(NULL, " ");
 
 		if (tmp_tok == NULL)
