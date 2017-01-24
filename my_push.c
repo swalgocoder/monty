@@ -10,7 +10,7 @@ void my_push(stack_t **head, unsigned int line_number)
 {
 	(void) line_number;
 
-	printf("enter push\n");
+
 	if (my_array[1] == 0)
 		add_node_end(head, my_array[0]);
 	else
@@ -28,7 +28,7 @@ void my_pall(stack_t **head, unsigned int line_number)
 	stack_t *temp;
 	(void) line_number;
 
-	printf("enter pall\n");
+
 	if (*head != NULL)
 	{
 		temp = find_end(head);
@@ -38,7 +38,7 @@ void my_pall(stack_t **head, unsigned int line_number)
 			temp = temp->prev;
 		}
 	}
-	printf("finish\n");
+
 }
 
 /**
@@ -72,7 +72,7 @@ void my_pop(stack_t **head, unsigned int line_number)
 {
 	stack_t *temp, *helptmp;
 
-	printf("enter pop\n");
+
 	if (*head == NULL)
 	{
 		printf("L%u: can't pop, empty stack\n", line_number);
@@ -96,18 +96,18 @@ void my_pop(stack_t **head, unsigned int line_number)
 void my_swap(stack_t **head, unsigned int line_number)
 {
 	stack_t *temp, *helptmp;
-	int help;
+	int swap_n;
 
 	temp = find_end(head);
-	printf("enter swap\n");
+
 	if (temp == NULL || temp->prev == NULL )
 	{
 		printf("L%u: can't swap, no space stack\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	helptmp = temp->prev;
-	printf("%d, %d\n", temp->n, helptmp->n);
-	help = temp->n;
+
+	swap_n = temp->n;
 	temp->n = helptmp->n;
-	helptmp->n = help;
+	helptmp->n = swap_n;
 }
