@@ -1,5 +1,11 @@
 # monty
 
+/**
+ *The code implementation of this project is mostly due to the help of jay, her help is greatly appreciated.
+ *https://github.com/jayjay823/monty
+ *
+ */
+
 The project:
 The Monty language
 

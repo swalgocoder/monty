@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * The code implementation of this project is mostly due to the credit and help of jay, her help is greatly   * * appreciated.
+ * "https://github.com/jayjay823/monty"
+ *
+ */
+
 int my_array[2];
 int main(int argc, char **argv)
 {
